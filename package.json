@@ -1,0 +1,21 @@
+{
+    "name": "ProjectorPJLink",
+    "version": "0.0.1",
+    "private": true,
+    "description": "An Octoblu device to control Projectors via PJLink Protocol",
+    "main": "command.js",
+    "scripts": {
+        "start": "node command.js"
+    },
+    "Author": "Thomas Root",
+    "license": "ISC",
+    "engineStrict": true,
+    "dependencies": {
+        "meshblu": "^1.22.0",
+        "debug": "^2.2.0"
+    },
+  "keywords": [
+    "meshblu-connector",
+    "gateblu"
+  ]
+}
