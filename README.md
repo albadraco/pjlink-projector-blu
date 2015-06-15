@@ -51,6 +51,8 @@ SubCommands Per-Command:
 		- Invalid Input Source
 		- Unavailable
 		- Display Failure
+		
+	** FOR INPUT  the "Custom Field" needs to be set to 1 - 9 to change between input sources of the same time.
 
 	Lamp:
 		- Get

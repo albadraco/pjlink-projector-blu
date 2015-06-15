@@ -1,6 +1,6 @@
 {
     "name": "pjlink-projector-blu",
-    "version": "0.0.1",
+    "version": "1.0.2",
     "description": "An Octoblu device to control Projectors via PJLink Protocol",
     "main": "command.js",
     "scripts": {

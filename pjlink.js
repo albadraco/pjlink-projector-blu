@@ -26,11 +26,11 @@ var Commands = {
         ]
     },
     Input: {
-        RGB:     '%1INPT 12' + CR,
-        VIDEO:   '%1INPT 22' + CR,
-        DIGITAL: '%1INPT 32' + CR,
-        STORAGE: '%1INPT 42' + CR,
-        NETWORK: '%1INPT 52' + CR,
+        RGB:     '%1INPT 1?' + CR,
+        VIDEO:   '%1INPT 2?' + CR,
+        DIGITAL: '%1INPT 3?' + CR,
+        STORAGE: '%1INPT 4?' + CR,
+        NETWORK: '%1INPT 5?' + CR,
         Get: '%1INPT ?' + CR,
         Result: [
              '%1INPT=OK' + CR, 'Success',
@@ -156,6 +156,10 @@ function getAuthCommand(sock, options, sessionid) {
 }
 function sendCommand(sock, options, operation, auth) {
     var cmdline = Commands[operation.Command][operation.Operation];
+    if (operation.Command === "Input") 
+    {
+        cmdline = cmdline.replace("?",  operation.Custom);
+    }
     if (auth !== 'undefined') {
         cmdline = auth + cmdline;
     }
