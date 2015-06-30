@@ -120,18 +120,19 @@ var OPTIONS_SCHEMA = {
       },
       NetworkAddress: {
           type: 'string',
-          required: false,
-          default: '0.0.0.0'
+          required: true,
       },
       NetworkPort: {
           type: 'integer',
-          required: false,
+          required: true,
           default: 4352,
       },
       DevicePassword: {
           type: 'string',
           required: false,
-          default: 'blank'
+          x-schema-form: {
+            type: 'password'
+          }
      }
   }
 };
