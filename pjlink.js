@@ -130,7 +130,9 @@ var OPTIONS_SCHEMA = {
       DevicePassword: {
           type: 'string',
           required: false,
-          default: ''
+          x-schema-form: {
+            type: 'password'
+          }
      }
   }
 };
